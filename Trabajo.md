@@ -12,9 +12,13 @@ Deberíamos hablar de las siguientes cosas:
   - Hay que extender más esta parte.
 - Qué es autentificar == autenticar
   - El usuario es quien dice ser. No repudio (o no rechazo)
+  - Autenticidad (spsi_slides, 140)
+  - MAC (spsi_slides, 157)
+    - TLS utiliza MAC
   - Firma digital
   - Tipos de métodos (https://www.wikiwand.com/en/Authentication), (https://www.redeszone.net/tutoriales/seguridad/diferencias-autenticacion-autorizacion/)
   - Tipos de factores (https://www.wikiwand.com/en/Authentication#/Authentication_factors)
+  - Control de accesos (spsi_slides, 262)
   - 2FA
   - OAuth.
   - Biometría.
