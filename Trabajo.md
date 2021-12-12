@@ -106,4 +106,6 @@ Por ello, será necesario implantar una normativa que proteja a los usuarios y p
 # Cosas que no son bibliografía todavía pero son enlaces de interés:
 
 https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
-https://www.idenfy.com/blog/identification-verification-authentication/
+https://www.idenfy.com/blog/identification-verification-authentication/https://www.wikiwand.com/en/General_Data_Protection_Regulation
+https://www.wikiwand.com/en/Certificate_authority
+https://www.wikiwand.com/en/Digital_identity#/Technical_aspects
