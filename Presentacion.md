@@ -9,6 +9,11 @@ toc: true
 toc-title: Índice
 ---
 
+<!--
+Compilar con
+pandoc Presentacion.md -t revealjs -s --slide-level=2 --toc -V theme:beige -o Presentacion.html
+-->
+
 # Métodos modernos
 
 @. Integridad
