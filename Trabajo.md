@@ -13,28 +13,39 @@ date: 11 de Diciembre de 2021
 
 # Autentificación e identificación
 
-
-
-## Guion
-
-
-Deberíamos hablar de las siguientes cosas:
-
-
 ## Introducción
-- Ejemplo: cajero. Introduces tarjeta (identificación). Cuando quieres hacer operaciones, metes el pin (autentificación).
 
+Es viernes por la tarde. En un rato, saldrás con tus compañeros a tomar algo. Necesitarás dinero, así que piensas en acercarte al cajero antes de reunirte con ellos.
+
+Al llegar al banco, compruebas que hay gente esperando. Todos ellos realizan una especie de ritual antes de marcharse con su dinero. Lo normal es que también lo tengas que hacer.
+
+Así que, sin dudarlo, sigues este curioso proceso. **Sacas tu tarjeta de crédito**, la pasas por el lector, e introduces tu importantísimo número secreto; el **PIN de la tarjeta**. De esta forma, el cajero te permite llevarte tu propio dinero. El tuyo, claro está. ¿No sería raro que pudieras acceder a las cuentas de otras personas?
+
+Acabamos de describir el proceso de **identificación**, **autentificación** y **autorización**.
+
+En este documento, vamos a explicar qué son exactamente y por qué son tan importantes.
 
 ## ¿Qué es la identificación?
-### Bases
-- Qué es identificar (https://www.wikiwand.com/en/Digital_identity)
-  - Introducir credenciales y comprobar que existen.
-  - spsi_slides, 340
-### Formas de identificarse
-### Problemas de la identificación por sí sola
-- Problema: quién nos asegura que es quien dice ser? [*A critical problem in cyberspace is knowing with whom one is interacting. Using static identifiers such as password and email there are no ways to precisely determine the identity of a person in digital space, because this information can be stolen or used by many individuals acting as one.*](https://www.wikiwand.com/en/Digital_identity#/Background) (Enlazar con la autentificación.).
-- (spsi_slides, 340)
 
+La identificación es el proceso en el que una persona reconoce ser ella misma.
+
+Tradicionalmente, esto lo hemos hecho de maneras muy intuitivas. Por ejemplo, mostrando nuestro DNI, o licencia de conducir. Sin embargo, en la era digital, esto no es tan sencillo.
+
+Desde hace muchos años, estamos acostumbrados a usar **correos electrónicos y contraseñas**. En principio, deberían ser personales. Aunque nuestro correo es único, únicamente uno mismo debe conocer la contraseña.
+
+Sin embargo, en la práctica, esto no es suficiente. ¿Quién impide a nuestro amigo introducir esa serie de caracteres mágicos por nosotros? Es más, ¿qué ocurriría si a ciertas páginas web se le [filtraran](https://www.businessinsider.com/stolen-data-of-533-million-facebook-users-leaked-online-2021-4) [nuestros](https://www.bbc.com/news/technology-58817658#:~:text=Game%2Dstreaming%20platform%20Twitch%20has,company%20information%20and%20streamers'%20earnings.&text=The%20documents%20appear%20to%20show,in%20the%20past%20two%20years) [datos](https://www.csoonline.com/article/3180762/inside-the-russian-hack-of-yahoo-how-they-did-it.html) [personales](https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)?
+
+En nuestro ejemplo, una cierta persona podría tomar prestada (o "*prestada*") nuestra tarjeta de crédito. Pero eso no es suficiente para que se lleve nuestro dinero.
+
+Este problema lo solventará la [autentificación](#qué-es-la-autentificación).
+
+### Una identidad digital para la nueva era
+
+Las tecnologías de la información y comunicación se han asentado. Algunos procesos tradicionalmente presenciales, como la presentación de documentos oficiales, se han movido a páginas web en internet. Por tanto, necesitaremos una alternativa al DNI. Aquí es donde entra el concepto de identidad digital.
+
+Una **identidad digital** es la información de una entidad para representar un agente externo. La ISO/IEC 24760-1 define una entidad como *conjunto de atributos relacionados con una entidad*. Este término se extendió posteriormente para incluir aspectos de identificación personal.
+
+WIP. Continuar con esto https://www.wikiwand.com/en/Digital_identity#/Technical_aspects.
 
 ## ¿Qué es la autentificación?
 - Qué es autentificar == autenticar
@@ -46,9 +57,11 @@ Deberíamos hablar de las siguientes cosas:
 - Tipos de factores (https://www.wikiwand.com/en/Authentication#/Authentication_factors)
 
 
-## Métodos modernos de autentificación e identificación
+# Métodos modernos de autentificación e identificación
 
-### MAC
+A continuación exponemos algunos métodos de autentificación e identificación muy usados en el día de hoy.
+
+## MAC
 La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. La **integridad** consiste en asegurarse de que una información no ha sido modificada por terceros y que en caso de haberlo sido se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
 $$
 MAC(M) = F(K_{AB} , M)
@@ -73,7 +86,7 @@ Esta variante es conocida como *HMAC*. Otra variante estándar es el *CBC-MAC*, 
 
 Esta técnica es utilizada en el protocolo TLS. Este es un protocolo criptográfico que proporciona comunicaciones seguras en una red, normalmente Internet. TLS utiliza MAC como técnica de seguridad en una fase previa de intercambio de llaves entre el cliente y el servidor, conocida como 'handshake' y  numerando y cifrando los registros de información transferida con MAC. 
 
-### Firma digital
+## Firma digital
 
 Todas las técnicas de cifrado no tendrían sentido si la comunicación se realiza con un usuario no autorizado. Por ello se necesitan técnicas para validar la identidad del interlocutor. Al margen de la autenticación MAC, un sistema simple basado en técnicas de cifrado de clave secreta es el denominado **reto-respuesta**. En él, dada una pareja emisor-receptor, A-B, y la clave entre ellos compartida $K_{AB}$ , los pasos seguidos son:
 1. A contacta con B indicándole su deseo de comunicación.
@@ -120,8 +133,8 @@ Mediante este uso de esquemas de firma digital basados en funciones hash se cubr
 - **Integridad**, ya que el resumen es único para cada mensaje.
 - **Autenticación**, al cifrar la clave privada del emisor para cifrar mediante RSA el mensaje transmitido.
 
-### (Renombrar esta sección)
-#### Control de accesos
+## Otras técnicas de identificación y autentificación
+### Control de accesos
 
 Los primeros elementos para prevenir accesos no autorizados a la red son establecer medidas para controlar dicho acceso y determinar la autenticidad de las entidades. Estudiaremos ahora algunas técnicas hardware y software para garantizar dicho acceso.
 
@@ -135,7 +148,7 @@ También podemos considerar el control mediante tarjetas de identificación, con
 
 Por otro lado, mediante software, existen aplicaciones que monitorizan las actividades personales y almacenan eventos relacionados con el acceso. Algunos ejemplos de aplicaciones de monitorización de accesos son [PRTG](https://www.paessler.com/es/prtg), [Nagios Network Analyzer](https://www.nagios.com/products/nagios-network-analyzer/) o [Pandora FMS](https://pandorafms.com/es/). Tienen la ventaja de que se puede emplear fácilmente en modo remoto utilizando técnicas de reconexión automática o presentación de informes regularmente en terminales conectados de varias maneras. 
 
-#### Verificación en dos pasos
+### Verificación en dos pasos
 
 La verificación en dos pasos, en inglés '*two-factor authentication*' y popularmente conocida como *2FA* es una técnica de identificación cuya idea básica es añadir un paso más a las técnicas de verificación usuales. Para clarificar, nos centraremos en el caso de iniciar sesión en distintas plataformas, de hecho la verificación en dos pasos es usada en servicios como Google, Facebook, Twitter o Instagram.
 
@@ -145,7 +158,7 @@ La manera de hacerlo es añadir un segundo paso en el proceso de identificarte e
 
 Hay muchos métodos de verificación en dos pasos, algunos de los más populares y conocidos son las ya mencionadas verificación por SMS o correo electrónico, pregunta de seguridad, aplicaciones de autenticación, códigos en la propia aplicación, llaves de seguridad, biometría o códigos de recuperación.
 
-#### OAuth
+### OAuth
 
 Cada vez más páginas webs, foros, blogs, tiendas etc. nos piden que nos registremos rellenando una y otra vez para cada sitio web todos nuestros datos. Gracias a Open Authorization (OAuth) nos podemos olvidar de tener que registrarnos una y otra vez en cada uno de los servicios que utilicemos, ya que, con un solo registro, podríamos iniciar sesión muy fácilmente en diferentes webs, sin necesidad de compartida toda nuestra identidad digital.
 
@@ -168,7 +181,7 @@ Veámoslo de forma conjunta, los pasos que sigue OAuth son:
 
 En caso de que, en algún paso, el usuario deniegue el acceso o el servidor detecte algún tipo de error, la aplicación no podrá acceder y mostrará un mensaje de error.
 
-#### Biometría
+### Biometría
 
 La biometría es la identificación automática de los individuos en función de sus características biológicas. La biometría se basa en el reconocimiento de una característica física e intransferible de las personas, como retina, huellas dactilares, palma de la mano, etc. A grandes rasgos, se compara la imagen obtenida mediante un escáner o similar con una base de datos almacenada en el sistema.
 
@@ -182,25 +195,21 @@ La firma biométrica añade evidencias físicas e irrefutables para crear una fi
 
 La firma biométrica es un recurso verdaderamente práctico para la protección de la identidad digital. Es imposible duplicar una huella dactilar o un iris, o imitar a la perfección una voz o la forma de realizar una firma manuscrita sobre una pantalla. Esto hace que [la firma biométrica sea prácticamente infalsificable](https://www.viafirma.com/blog-xnoccio/es/falsificar-firma-digital/).
 
-## Bibliografía
+# Bibliografía
 
-[1](https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/)
+1. Carrillo, A. B. (2021, 20 septiembre). ¿Qué es Biometría? Concepto y tendencias. Blog de Viafirma. https://www.viafirma.com/blog-xnoccio/es/que-es-biometria/
+2. colaboradores de Wikipedia. (2021, 30 julio). Seguridad de la capa de transporte. Wikipedia, la enciclopedia libre. https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte
+3. Espinosa, O. (2021, 23 julio). OAuth: cómo funciona este servicio para páginas web. RedesZone. https://www.redeszone.net/tutoriales/seguridad/que-es-oauth/
+4. Fernández, Y. (2021, 6 octubre). Verificación en dos pasos o 2FA: qué es, para qué sirve y qué métodos existen. Xataka. https://www.xataka.com/basics/verificacion-dos-pasos-2fa-que-sirve-que-metodos-existen
+5. García Teodoro, P., López Soler, J. M., & Pérez Córdoba, J. L. (2007). Transmision de datos y redes de computadoras. PEARSON.
+6. How and when is a MAC sent across during a TLS connection? (2015, 28 diciembre). Information Security Stack Exchange. https://security.stackexchange.com/questions/109131/how-and-when-is-a-mac-sent-across-during-a-tls-connection
+7. J. (2019, 27 enero). ¿Qué es identificación y autenticación? TecnoMental. https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/
+8. OAuth 2.0 — OAuth. (2021). OAuth. https://oauth.net/2/
+9. Pathak, A. (2021, 29 septiembre). 12 Software de monitoreo de red para pequeñas y empresas. Geekflare. https://geekflare.com/es/network-monitoring-software/#anchor-prtg
+10. Tipos de terminales de control de acceso: ¿Cuál utilizar? | Masscomm. (2021). Masscomm. https://www.masscomm.es/blog/tipos-de-terminales-de-control-de-acceso-cual-utilizar
+11. Wikipedia contributors. (2021, 23 noviembre). OAuth. Wikipedia. https://en.wikipedia.org/wiki/OAuth
 
-https://security.stackexchange.com/questions/109131/how-and-when-is-a-mac-sent-across-during-a-tls-connection
+## Cosas que no son bibliografía todavía pero son enlaces de interés:
 
-https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte
-
-https://www.masscomm.es/blog/tipos-de-terminales-de-control-de-acceso-cual-utilizar
-
-https://geekflare.com/es/network-monitoring-software/#anchor-prtg
-
-https://www.xataka.com/basics/verificacion-dos-pasos-2fa-que-sirve-que-metodos-existen
-
-https://www.redeszone.net/tutoriales/seguridad/que-es-oauth/
-
-https://oauth.net/2/
-
-https://en.wikipedia.org/wiki/OAuth
-
-https://www.viafirma.com/blog-xnoccio/es/que-es-biometria/
-
+https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
+https://www.idenfy.com/blog/identification-verification-authentication/
