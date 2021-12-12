@@ -4,18 +4,18 @@ author:
 - Andrés Millán Muñoz
 - delightfulagony
 - Juan Antonio Villegas Recio
-date: 11 de Diciembre de 2021
+
+documentclass: report
+lang: es
 toc: true
 toc-title: Índice de contenidos
 numbersections: true
 urlcolor: blue
 ---
-<!-- 
+<!--
 Compilar con
 pandoc Trabajo.md -t latex -o Trabajo.pdf
 -->
-
-\newpage{}
 
 
 # Introducción
@@ -76,8 +76,6 @@ Como podemos observar, la identificación es una bendición mixta. Ser capaces d
 
 Por ello, será necesario implantar una normativa que proteja a los usuarios y permita que estos abusos se reduzcan. Y, para ello, será necesaria la colaboración de todo el mundo.
 
-
-\newpage{}
 
 # ¿Qué es la autentificación?
 - Qué es autentificar == autenticar
@@ -232,11 +230,19 @@ La firma biométrica es un recurso verdaderamente práctico para la protección 
 
 # Bibliografía
 
-[1](https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/)
-
-# Cosas que no son bibliografía todavía pero son enlaces de interés:
-
-https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
-https://www.idenfy.com/blog/identification-verification-authentication/https://www.wikiwand.com/en/General_Data_Protection_Regulation
-https://www.wikiwand.com/en/Certificate_authority
-https://www.wikiwand.com/en/Digital_identity#/Technical_aspects
+1. Carrillo, A. B. (2021, 20 septiembre). ¿Qué es Biometría? Concepto y tendencias. Blog de Viafirma. https://www.viafirma.com/blog-xnoccio/es/que-es-biometria/
+2. colaboradores de Wikipedia. (2021, 30 julio). Seguridad de la capa de transporte. Wikipedia, la enciclopedia libre. https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte
+3. Espinosa, O. (2021, 23 julio). OAuth: cómo funciona este servicio para páginas web. RedesZone. https://www.redeszone.net/tutoriales/seguridad/que-es-oauth/
+4. Fernández, Y. (2021, 6 octubre). Verificación en dos pasos o 2FA: qué es, para qué sirve y qué métodos existen. Xataka. https://www.xataka.com/basics/verificacion-dos-pasos-2fa-que-sirve-que-metodos-existen
+5. García Teodoro, P., López Soler, J. M., & Pérez Córdoba, J. L. (2007). Transmision de datos y redes de computadoras. PEARSON.
+6. How and when is a MAC sent across during a TLS connection? (2015, 28 diciembre). Information Security Stack Exchange. https://security.stackexchange.com/questions/109131/how-and-when-is-a-mac-sent-across-during-a-tls-connection
+7. J. (2019, 27 enero). ¿Qué es identificación y autenticación? TecnoMental. https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/
+8. OAuth 2.0 — OAuth. (2021). OAuth. https://oauth.net/2/
+9. Pathak, A. (2021, 29 septiembre). 12 Software de monitoreo de red para pequeñas y empresas. Geekflare. https://geekflare.com/es/network-monitoring-software/#anchor-prtg
+10. Tipos de terminales de control de acceso: ¿Cuál utilizar? | Masscomm. (2021). Masscomm. https://www.masscomm.es/blog/tipos-de-terminales-de-control-de-acceso-cual-utilizar
+11. Wikipedia contributors. (2021, 23 noviembre). OAuth. Wikipedia. https://en.wikipedia.org/wiki/OAuth
+12. Drozhzhin, A. (2021, 24 septiembre). How identification, authentication, and authorization differ. Kaspersky. https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
+13. I. (2021, 26 febrero). Identification vs. Authentication vs. Verification: What Are The Differences? IDenfy. https://www.idenfy.com/blog/identification-verification-authentication/
+14. Wikipedia contributors. (2021, 9 diciembre). Certificate authority. Wikipedia. https://en.wikipedia.org/wiki/Certificate_authority?oldformat=true
+15. Wikipedia contributors. (2021b, diciembre 10). General Data Protection Regulation. Wikipedia. https://en.wikipedia.org/wiki/General_Data_Protection_Regulation?oldformat=true
+16. Wikipedia contributors. (2021a, noviembre 5). Digital identity. Wikipedia. https://en.wikipedia.org/wiki/Digital_identity?oldformat=true
