@@ -5,11 +5,17 @@ author:
 - Gonzalo Moreno Soto
 - Juan Antonio Villegas Recio
 
+documentclass: book
+lang: es
 toc: true
 toc_depth: 2
 toc-title: Índice
-date: 11 de Diciembre de 2021
+date: 12 de Diciembre de 2021
 ---
+<!-- 
+Compilar con
+pandoc Trabajo.md -t latex -o Trabajo.pdf
+-->
 
 # Autentificación e identificación
 
@@ -129,6 +135,7 @@ Recibido $C$ en el receptor, este procederá como sigue:
 ![Descifrado con firma digital usando compendio](img/FirmaDigitalReceptor.png)
 
 Mediante este uso de esquemas de firma digital basados en funciones hash se cubre no solo el no repudio, sino también:
+
 - **Confidencialidad**: Mediante el uso de RSA con la clave pública del receptor.
 - **Integridad**, ya que el resumen es único para cada mensaje.
 - **Autenticación**, al cifrar la clave privada del emisor para cifrar mediante RSA el mensaje transmitido.
@@ -140,11 +147,11 @@ Los primeros elementos para prevenir accesos no autorizados a la red son estable
 
 Sobre las técnicas hardware, una de las alternativas es el uso de terminales de acceso, que son dispositivos que se encargan de la autenticación y la verificación de la persona que los usa. Pueden incluir verificación por huellas dactilares y sensores anti-rotura en tiempo real, y funcionar en línea o en solitario. Otra alternativa es la monitorización visual, incluyendo el uso de imágenes y audio en tiempo real junto con tecnologías de localización tipo GPS.
 
-![Control de accesos mediante terminales](https://www.syon.es/wp-content/uploads/2018/05/mini-SFP-11-2.png)
+![Control de accesos mediante terminales](img/huella.png){width="50%"}
 
 También podemos considerar el control mediante tarjetas de identificación, con la vulnerabilidad de que en caso de hurto o pérdida algún agente externo puede hacerse pasar por el propietario de la tarjeta; identificación biométrica, de la que hablaremos más adelante, o video-vigilancia mediante el análisis de imágenes de video en circuito cerrado, permitiendo una respuesta casi en tiempo real.
 
-![Videovigilancia](https://lapagina.com.sv/wp-content/uploads/2021/04/sistemas-de-videovigilancia.jpg)
+![Videovigilancia](img/vigilancia.jpg){width="60%"}
 
 Por otro lado, mediante software, existen aplicaciones que monitorizan las actividades personales y almacenan eventos relacionados con el acceso. Algunos ejemplos de aplicaciones de monitorización de accesos son [PRTG](https://www.paessler.com/es/prtg), [Nagios Network Analyzer](https://www.nagios.com/products/nagios-network-analyzer/) o [Pandora FMS](https://pandorafms.com/es/). Tienen la ventaja de que se puede emplear fácilmente en modo remoto utilizando técnicas de reconexión automática o presentación de informes regularmente en terminales conectados de varias maneras. 
 
@@ -153,6 +160,8 @@ Por otro lado, mediante software, existen aplicaciones que monitorizan las activ
 La verificación en dos pasos, en inglés '*two-factor authentication*' y popularmente conocida como *2FA* es una técnica de identificación cuya idea básica es añadir un paso más a las técnicas de verificación usuales. Para clarificar, nos centraremos en el caso de iniciar sesión en distintas plataformas, de hecho la verificación en dos pasos es usada en servicios como Google, Facebook, Twitter o Instagram.
 
 Tradicionalmente siempre ha bastado con proporcionar usuario y contraseña para iniciar sesión, pero desde hace pocos años hay una tendencia a incluir un paso más, como puede ser introducir un código enviado por SMS, confirmar el inicio de sesión desde un e-mail o una notificación en el teléfono móvil. A este segundo paso es al que nos referimos en la 2FA. La motivación de introducir este método es que a veces puede haber filtraciones de contraseñas en Internet o alguien puede adivinar tu contraseña porque es muy sencilla (fecha de nacimiento, nombre de una mascota, etc.). Por eso, cuando se escriba nombre y contraseña correcto, es bueno tener una manera de confirmar que quien lo está escribiendo es la persona correcta.
+
+![Verificación en dos pasos al iniciar sesión](img/2fa.jpg){width="50%"}
 
 La manera de hacerlo es añadir un segundo paso en el proceso de identificarte en un servicio. De esta manera, al escribir correctamente nombre de usuario o correo electrónico junto a la contraseña, el servicio pedirá un segundo paso. Por tanto, la 2FA sirve para evitar que otras personas puedan acceder a una cuenta, incluso en el caso de que hayan conseguido averiguar la contraseña utilizada de alguna manera. De esta forma, incluso si se roban las credenciales siempre quedará ese segundo paso en el que el propietario de la cuenta tiene que verificar el inicio de sesión.
 
@@ -185,7 +194,7 @@ En caso de que, en algún paso, el usuario deniegue el acceso o el servidor dete
 
 La biometría es la identificación automática de los individuos en función de sus características biológicas. La biometría se basa en el reconocimiento de una característica física e intransferible de las personas, como retina, huellas dactilares, palma de la mano, etc. A grandes rasgos, se compara la imagen obtenida mediante un escáner o similar con una base de datos almacenada en el sistema.
 
-![Biometría](https://www.pragma.com.co/hs-fs/hubfs/H_que_es_biometria.jpg?width=1200&name=H_que_es_biometria.jpg)
+![Biometría](img/biometria.png){width="50%"}
 
 Es tal la importancia de la biometría en la actualidad, que España ocupa el tercer lugar de la Unión Europea en empresas que la usan para identificarse. En concreto, el 20% de las compañías españolas lo hicieron en 2019, según [Eurostat](https://ec.europa.eu/eurostat/web/products-datasets/-/isoc_cisce_ra). 
 
