@@ -4,22 +4,21 @@ author:
 - Andrés Millán Muñoz
 - delightfulagony
 - Juan Antonio Villegas Recio
-
-documentclass: book
-lang: es
+date: 11 de Diciembre de 2021
 toc: true
-toc_depth: 2
-toc-title: Índice
-date: 12 de Diciembre de 2021
+toc-title: Índice de contenidos
+numbersections: true
+urlcolor: blue
 ---
 <!-- 
 Compilar con
 pandoc Trabajo.md -t latex -o Trabajo.pdf
 -->
 
-# Autentificación e identificación
+\newpage{}
 
-## Introducción
+
+# Introducción
 
 Es viernes por la tarde. En un rato, saldrás con tus compañeros a tomar algo. Necesitarás dinero, así que piensas en acercarte al cajero antes de reunirte con ellos.
 
@@ -31,7 +30,7 @@ Acabamos de describir el proceso de **identificación**, **autentificación** y 
 
 En este documento, vamos a explicar qué son exactamente y por qué son tan importantes.
 
-## ¿Qué es la identificación?
+# ¿Qué es la identificación?
 
 La identificación es el proceso en el que una persona reconoce ser ella misma.
 
@@ -43,90 +42,65 @@ Sin embargo, en la práctica, esto no es suficiente. ¿Quién impide a nuestro a
 
 En nuestro ejemplo, una cierta persona podría tomar prestada (o "*prestada*") nuestra tarjeta de crédito. Pero eso no es suficiente para que se lleve nuestro dinero.
 
-Este problema lo solventará la [autentificación](#qué-es-la-autentificación).
+Este problema lo intentará solventar la [autentificación](#qué-es-la-autentificación).
 
-### Una identidad digital para la nueva era
+## Una identidad digital para la nueva era
 
 Las tecnologías de la información y comunicación se han asentado. Algunos procesos tradicionalmente presenciales, como la presentación de documentos oficiales, se han movido a páginas web en internet. Por tanto, necesitaremos una alternativa al DNI. Aquí es donde entra el concepto de identidad digital.
 
 Una **identidad digital** es la información de una entidad para representar un agente externo. La ISO/IEC 24760-1 define una entidad como *conjunto de atributos relacionados con una entidad*. Este término se extendió posteriormente para incluir aspectos de identificación personal.
 
-WIP. Continuar con esto https://www.wikiwand.com/en/Digital_identity#/Technical_aspects.
+Las identidades digitales se pueden representar mediante **certificados digitales**, de la misma manera que un DNI te representa en el mundo físico. Contienen información relacionada con la persona, y pueden ser emitidos por una **autoridad de certificación**.
 
-## ¿Qué es la autentificación?
+FIXME ¿seguimos desarrollando esta parte? Nos metemos en jardines de otros.
+
+## Espera, ¿por qué todas las páginas me ofrecen galletas?
+
+Internet es, en su mayor parte, gratuito para el usuario. Generalmente, no hace falta que paguemos para leer artículos, ni para ver vídeos, ni para descargar archivos. Sin embargo, toda la infraestructura que hay detrás cuesta mucho dinero. Entonces, ¿cómo se lucran estos servicios?
+
+La respuesta es **la publicidad**. Las empresas ofrecen mostrar anuncios en su página web a cambio de una compensación monetaria. De esta forma, a cambio de visualizar molesta propaganda, los usuarios no necesitan aportar dinero.
+
+Con el tiempo, las grandes compañías se dieron cuenta de que se pueden aprovechar las ventajas de la identificación digital. Siguiéndole la pista a los datos almacenados y enlazándolos con una persona real, pueden ofrecer publicidad específica para cada usuario. Por ejemplo, si estás interesado en comprar un móvil, y haces varias búsquedas sobre este tema, es probable que encuentres anuncios relacionados con la telefonía en cualquier página.
+
+Para contrarrestar este tipo de comportamientos posiblemente abusivos, se han lanzado iniciativas como [GPDR](https://www.wikiwand.com/en/General_Data_Protection_Regulation), el Reglamento General de Protección de Datos de la Unión Europea. Esta ley es la responsable de que la mayoría de páginas te pregunten por cookies al entrar.
+
+![Ugh, qué pesadilla](img/cookies.png){ width=450px }
+
+Algunos servicios han empezado a implementar sistemas de protección de datos para mitigar el impacto de este problema. Por ejemplo, la anonimización de datos es uno de ellos. Esto ha llevado a que muchos usuarios pongan por delante la privacidad antes que la experiencia de usuario.
+
+También se han lanzado algunas herramientas que actúan desde la parte del usuario. Algunas de ellas son [µblock origin](https://ublockorigin.com/), que bloquea cualquier tipo de publicidad, o [privacy badger](https://privacybadger.org/), la cual bloquea los rastreadores invisibles. Hoy en día, considero que es mandatorio utilizar extensiones similares. Así lo consideran incluso los [propios navegadores](https://www.mozilla.org/en-US/firefox/features/adblocker/).
+
+## Un arma de doble filo
+
+Como podemos observar, la identificación es una bendición mixta. Ser capaces de reconocer quiénes somos en internet nos aporta tranquilidad en las interacciones online. Y, a la vez, damos vía libre a que se puedan aprovechar de nosotros.
+
+Por ello, será necesario implantar una normativa que proteja a los usuarios y permita que estos abusos se reduzcan. Y, para ello, será necesaria la colaboración de todo el mundo.
+
+
+\newpage{}
+
+# ¿Qué es la autentificación?
 - Qué es autentificar == autenticar
   - El usuario es quien dice ser. No repudio (o no rechazo)
   - Autenticidad (spsi_slides, 140)
-
-La autentificación es el proceso por el cual se verifica la procedencia o identidad de un documento o usuario. Ha supuesto un problema a solucionar desde tiempos antiguos. Si bien sus usos y aplicaciones pueden haber variado a lo largo del tiempo, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo? 
-
-A lo largo de la historia se han ido usando distintos métodos, acordes a la tecnologia y necesidades de cada era, aunque algunos principios se han mantenido. Pongamos por ejemplo la firma. La firma es un método por el cual se identifica, autentifica y garantiza el "no repudio" del documento firmado. Es un método poco fiable, ya que es relativamente fácil replicar una firma, y dificil de comprobar si se trata de una copia o de la original, sin embargo es un método que ha perdurado desde el medievo hasta nuestros días y sigue teniendo un importante papel en nuestras vidas.
-
-Por supuesto, este no es el único método para verificar la autenticidad de un documento o la identidad de una persona. La mayoría de países del mundo cuentan con algún tipo de certificado que garantiza que una persona es quien dice ser, habitualmente incluyendo una fotografía, firma, huella dactilar o cualquier otro elemento identificativo y/o dificil de replicar.
-
-### El mundo digital
-
-Con el advenimiento de la era digital, la autentificación toma una renovada importancia. Es dificil verificar la identidad de un individuo tras la pantalla y problemas como suplantaciones de identidad o accesos no-autorizados a recursos de naturaleza privada suponen de mayor gravedad en un mundo cada vez más conectado y dependiente de internet y las nuevas tecnologías.
-
-Por supuesto, en respuesta a estos problemas se han diseñado y articulado gran variedad de métodos de autentificación para prevenir, o en el peor de los casos limitar la gravedad y alcance de estos problemas.
-
-### Métodos de autentificación
-
-Habitualmente, se asocian los métodos de autentificación con el uso de contraseñas. En realidad hay una gran variedad de métodos distintos para autentificar un usuario o un documento.
-
-Los métodos de autentificación se pueden dividir en 3 categorías [Chapter 21: Authentication and Auditing Services, What is Authentication?; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman]:
-
-* "Algo que eres"(*Something you are*): Estos métodos suelen utilizar datos biométricos para autentificar al usuario, huellas dactilares, escáneres de retina o iris, analisis de voz, escaneres faciales, etc.
-
-* "Algo que sabes"(*Something you know*): Métodos que dependen de contraseñas, patrones u otro tipo de información que el usuario posee de antemano.
-
-* "Algo que tienes"(*Something you have*): Métodos que pueden incluir tarjetas de coordenadas, tarjetas inteligentes, archivos informáticos o cualquier otro objeto pre-existente que sea necesario en el proceso de autentificación.
-
-Es habitual encontrar sistemas que combinen varios de estos métodos, esto es en lo que se basan los conocidos sistemas de autentificación en 2 pasos o de 2 factores (2FA).
-
-#### Algo que eres
-
-Los mecanismos de autentificación "Algo que eres" se basan en datos biométricos para verificar al usuario. La biométrica se podría definir como "el uso de la informática para extraer las características únicas de un individual, sean físicas o conductuales, para verificar positivamente y/o identificar la identidad de un individuo." [Chapter 1: An Introduction to Biometrics, A formal definition of biometrics; Biometric Technology, 2014, R. Das].
-
-Entre los datos biométricos más usados a día de hoy podemos encontrar los escáneres faciales, dactilares o el análisis de voz. Sin ir más lejos, muchos de los nuevos teléfonos móviles de media y alta gama traen incorporados un escáner de huella dactilar y/o tecnología infraroja para el escaneo de las características faciales, así como también ordenadores, muchos de los cuales incorporan software como Windows Hello para el desbloqueo por escaner facial o dactilar. [Learn about Windows Hello and set it up. 2021. Microsoft. http://web.archive.org/web/20211208034747/https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0]
-
-#### Algo que sabes
-
-Los mecanismos de autentificación "Algo que sabes" dependen de que ese "algo" sea dificil de adivinar y secreto. Este es el mecanismos de autentificación más extendido, por medio de contraseñas, sin embargo, para autenticarte de manera fiable, debes de conocer el secreto de manera fiable también. Esto no es tan sencillo como parece. A la mayoría de las personas no se le da bien inventarse y recordar cosas difíciles de adivinar, y se les da aún peor guardar secretos. Las contraseñas cortas son fáciles de recordar, pero aún más fáciles de adivinar, si son largas no será sencillo adivinarlas, pero serán complicadas de recordar. Muchos usuarios en respuesta a esto deciden apuntarlas, no vaya a ser que la olviden. Esto es otro tipo de mecanismo de autentificación que discutiremos más adelante, el "algo que tienes" pero ya no se trata de saber algo y mantenerlo en secreto.
-
-Este tipo de mecanismos es probablemente uno de los más antiguos y usados, uno esperaría una autenticación del tipo desafío-respuesta al llegar a un campamento militar o encontrarse con unos espías aliados en un museo de arte para pasar cierta información. [Chapter 21: Authentication and Auditing Services, Something You Know; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman] [Just M. (2011) Challenge-Response Identification. In: van Tilborg H.C.A., Jajodia S. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA. https://doi.org/10.1007/978-1-4419-5906-5_73] Los conocidos CAPTCHAs (Tests de Turing Completamente Automatizados para Diferenciar Humanos y Computadoras) son también un ejemplo de protocolo desafío-respuesta [What is CAPTCHA?. 2021. Google. https://web.archive.org/web/20211009162328/https://support.google.com/a/answer/1217728?hl=en]
-
-#### Algo que tienes
-
-En la práctica, los sistemas más efectivos de autentificación en internet suelen basarse en este tercer tipo. Lo que tienes podría ser una lista de contraseñas de un solo uso, una tarjeta electrónica o cualquier otro objeto al que solo el usuario tenga acceso. Normalmente se combinan también con el "Algo que sabes" y se crea así el 2FA. [Chapter 21: Authentication and Auditing Services, Something You Have; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman]
-
-### Aplicaciones
-
-A grosso modo podemos distinguir dos usos o aplicaciones de los protocolos de autentificación:
-
-* Control de accesos (o autentificación de usuarios)
-* Autentificación de información
-
-#### Control de accesos
-
-Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos. [Brose G. (2005) Access Control. In: van Tilborg H.C.A. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA . https://doi.org/10.1007/0-387-23483-7_3]
-
-####  Autentificación de información
-
-La autentificación de la información tiene dos objetivos, certificar el origen de ésta y garantizar que la información no ha sido modificada. La autentificación es un mecanismo crítico para mantener la integridad de la información y garantizar el no-repudio por parte del emisor. [Chapter 4: Data Authentication; Introduction to Network Security, Higher Education Press, 2014, J.Wang, Z.A.Kissel]
-
-La integridad de la información se refiere a que la información no pueda ser modificada por ningun actor no-autorizado.
-
-El no-repudio de la información se refiere a que la persona responsable de la información no pueda convencer a terceras personas de que esa información no le pertenece.
-
-
-### Métodos
+## Métodos
 - Tipos de métodos (https://www.wikiwand.com/en/Authentication), (https://www.redeszone.net/tutoriales/seguridad/diferencias-autenticacion-autorizacion/)
-### Factores
+## Factores
 - Tipos de factores (https://www.wikiwand.com/en/Authentication#/Authentication_factors)
 
 
-## Métodos modernos de autentificación e identificación
+# Métodos modernos de autentificación e identificación
+## MAC
+- MAC (spsi_slides, 157)
+  - TLS utiliza MAC
+- Mencionar que TLS lo usa
+## Firma digital
+ - Firma digital
+## (Renombrar esta sección)
+- Control de accesos (spsi_slides, 262)
+- 2FA
+- OAuth.
+- Biometría.
 
 ### MAC
 La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. La **integridad** consiste en asegurarse de que una información no ha sido modificada por terceros y que en caso de haberlo sido se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
@@ -256,11 +230,11 @@ La firma biométrica añade evidencias físicas e irrefutables para crear una fi
 
 La firma biométrica es un recurso verdaderamente práctico para la protección de la identidad digital. Es imposible duplicar una huella dactilar o un iris, o imitar a la perfección una voz o la forma de realizar una firma manuscrita sobre una pantalla. Esto hace que [la firma biométrica sea prácticamente infalsificable](https://www.viafirma.com/blog-xnoccio/es/falsificar-firma-digital/).
 
-## Bibliografía
+# Bibliografía
 
 [1](https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/)
 
-## Cosas que no son bibliografía todavía pero son enlaces de interés:
+# Cosas que no son bibliografía todavía pero son enlaces de interés:
 
 https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
 https://www.idenfy.com/blog/identification-verification-authentication/
