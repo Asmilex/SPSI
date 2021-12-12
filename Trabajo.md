@@ -5,7 +5,7 @@ author:
 - Gonzalo Moreno Soto
 - Juan Antonio Villegas Recio
 
-documentclass: book
+documentclass: report
 lang: es
 toc: true
 toc_depth: 2
@@ -21,12 +21,10 @@ geometry:
 - left=1.5in
 
 ---
-<!-- 
+<!--
 Compilar con
 pandoc Trabajo.md -t latex -o Trabajo.pdf
 -->
-
-\newpage{}
 
 
 # Introducción
@@ -87,8 +85,6 @@ Como podemos observar, la identificación es una bendición mixta. Ser capaces d
 
 Por ello, será necesario implantar una normativa que proteja a los usuarios y permita que estos abusos se reduzcan. Y, para ello, será necesaria la colaboración de todo el mundo.
 
-
-\newpage{}
 
 # ¿Qué es la autentificación?
 - Qué es autentificar == autenticar
@@ -254,12 +250,8 @@ La firma biométrica es un recurso verdaderamente práctico para la protección 
 9. Pathak, A. (2021, 29 septiembre). 12 Software de monitoreo de red para pequeñas y empresas. Geekflare. https://geekflare.com/es/network-monitoring-software/#anchor-prtg
 10. Tipos de terminales de control de acceso: ¿Cuál utilizar? | Masscomm. (2021). Masscomm. https://www.masscomm.es/blog/tipos-de-terminales-de-control-de-acceso-cual-utilizar
 11. Wikipedia contributors. (2021, 23 noviembre). OAuth. Wikipedia. https://en.wikipedia.org/wiki/OAuth
-
-# Cosas que no son bibliografía todavía pero son enlaces de interés:
-
-https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
-https://www.idenfy.com/blog/identification-verification-authentication/https://www.wikiwand.com/en/General_Data_Protection_Regulation
-
-https://www.wikiwand.com/en/Certificate_authority
-https://www.wikiwand.com/en/Digital_identity#/Technical_aspects
-https://www.idenfy.com/blog/identification-verification-authentication/
+12. Drozhzhin, A. (2021, 24 septiembre). How identification, authentication, and authorization differ. Kaspersky. https://www.kaspersky.com/blog/identification-authentication-authorization-difference/37143/
+13. I. (2021, 26 febrero). Identification vs. Authentication vs. Verification: What Are The Differences? IDenfy. https://www.idenfy.com/blog/identification-verification-authentication/
+14. Wikipedia contributors. (2021, 9 diciembre). Certificate authority. Wikipedia. https://en.wikipedia.org/wiki/Certificate_authority?oldformat=true
+15. Wikipedia contributors. (2021b, diciembre 10). General Data Protection Regulation. Wikipedia. https://en.wikipedia.org/wiki/General_Data_Protection_Regulation?oldformat=true
+16. Wikipedia contributors. (2021a, noviembre 5). Digital identity. Wikipedia. https://en.wikipedia.org/wiki/Digital_identity?oldformat=true
