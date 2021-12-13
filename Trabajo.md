@@ -48,7 +48,11 @@ A lo largo de la historia se han ido usando distintos métodos, acordes a la tec
 
 Por supuesto, este no es el único método para verificar la autenticidad de un documento o la identidad de una persona. La mayoría de países del mundo cuentan con algún tipo de certificado que garantiza que una persona es quien dice ser, habitualmente incluyendo una fotografía, firma, huella dactilar o cualquier otro elemento identificativo y/o dificil de replicar.
 
-#PF: Falta un conector entre lo físico y lo digital
+### El mundo digital
+
+Con el advenimiento de la era digital, la autentificación toma una renovada importancia. Es dificil verificar la identidad de un individuo tras la pantalla y problemas como suplantaciones de identidad o accesos no-autorizados a recursos de naturaleza privada suponen de mayor gravedad en un mundo cada vez más conectado y dependiente de internet y las nuevas tecnologías.
+
+Por supuesto, en respuesta a estos problemas se han diseñado y articulado gran variedad de métodos de autentificación para prevenir, o en el peor de los casos limitar la gravedad y alcance de estos problemas.
 
 ### Métodos de autentificación
 
@@ -85,14 +89,19 @@ En la práctica, los sistemas más efectivos de autentificación en internet sue
 A grosso modo podemos distinguir dos usos o aplicaciones de los protocolos de autentificación:
 
 * Control de accesos (o autentificación de usuarios)
-* Autentificación de documentos
+* Autentificación de información
 
 #### Control de accesos
 
 Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos. [Brose G. (2005) Access Control. In: van Tilborg H.C.A. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA . https://doi.org/10.1007/0-387-23483-7_3]
 
-####  Autentificación de documentos
+####  Autentificación de información
 
+La autentificación de la información tiene dos objetivos, certificar el origen de ésta y garantizar que la información no ha sido modificada. La autentificación es un mecanismo crítico para mantener la integridad de la información y garantizar el no-repudio por parte del emisor. [Chapter 4: Data Authentication; Introduction to Network Security, Higher Education Press, 2014, J.Wang, Z.A.Kissel]
+
+La integridad de la información se refiere a que la información no pueda ser modificada por ningun actor no-autorizado.
+
+El no-repudio de la información se refiere a que la persona responsable de la información no pueda convencer a terceras personas de que esa información no le pertenece.
 
 
 ### Métodos
