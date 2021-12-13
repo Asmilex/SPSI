@@ -5,14 +5,107 @@ author:
 - Gonzalo Moreno Soto
 - Juan Antonio Villegas Recio
 theme: Berlin
-toc: true
-toc-title: Índice
 ---
 
 <!--
 Compilar con
 pandoc Presentacion.md -t revealjs -s --slide-level=2 --toc -V theme:beige -o Presentacion.html
 -->
+
+# ¿De qué va todo esto?
+
+## Te acercas al banco
+
+![](img/banco.png)
+
+. . .
+
+## Introduces tu tarjeta
+![](img/tarjeta.jpg)
+
+. . .
+
+## Metes el pin
+
+![](img/pin.jpg)
+
+. . .
+
+## Y te llevas tu dinero
+
+![](img/billetes.jpg)
+
+
+# Un ritual habitual
+
+Este ha sido un ejemplo de
+
+. . .
+
+@. Identificación
+
+. . .
+
+@. Autentificación.
+
+. . .
+
+@. Autorización.
+
+# ¿Qué es la identificación?
+
+. . .
+
+Es el proceso en el que una persona reconoce ser ella misma.
+
+## Sistemas de login tradicionales
+
+![](./img/prado.png)
+
+Hasta ahora, solíamos usar correo o usuario y contraseña.
+
+
+## En la práctica, no es suficiente
+
+. . .
+
+@. ¿Podría suplantarnos alguien?
+
+. . .
+
+@. ¿Y qué ocurre si se filtran?
+
+. . .
+
+## Leak de Adobe...
+
+![](./img/adobe.png)
+
+. . .
+
+## ... de Yahoo...
+
+![](./img/yahoo.png)
+
+. . .
+
+## ... de Twitch...
+
+![](./img/twitch.png)
+
+. . .
+
+## ... Y, cómo no, de Facebook.
+
+![](img/facebook.png)
+
+# Necesitamos métodos más robustos
+
+Más tarde exploraremos cómo se debe hacer.
+
+. . .
+
+*Spoiler: la autentificación ayudará mucho.*
 
 # Métodos modernos
 
