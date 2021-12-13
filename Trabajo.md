@@ -20,7 +20,7 @@ pandoc Trabajo.md -t latex -o Trabajo.pdf
 
 # Introducción
 
-Es viernes por la tarde. En un rato, saldrás con tus compañeros a tomar algo. Necesitarás dinero, así que piensas en acercarte al cajero antes de reunirte con ellos.
+Es viernes por la tarde. En un rato, saldrás con tus **compañeros** a tomar algo. Necesitarás dinero, así que piensas en acercarte al cajero antes de reunirte con ellos.
 
 Al llegar al banco, compruebas que hay gente esperando. Todos ellos realizan una especie de ritual antes de marcharse con su dinero. Lo normal es que también lo tengas que hacer.
 
@@ -30,13 +30,14 @@ Acabamos de describir el proceso de **identificación**, **autentificación** y 
 
 En este documento, vamos a explicar qué son exactamente y por qué son tan importantes.
 
+
 # ¿Qué es la identificación?
 
 La identificación es el proceso en el que una persona reconoce ser ella misma.
 
 Tradicionalmente, esto lo hemos hecho de maneras muy intuitivas. Por ejemplo, mostrando nuestro DNI, o licencia de conducir. Sin embargo, en la era digital, esto no es tan sencillo.
 
-Desde hace muchos años, estamos acostumbrados a usar **correos electrónicos y contraseñas**. En principio, deberían ser personales. Aunque nuestro correo es único, únicamente uno mismo debe conocer la contraseña.
+Desde hace muchos años, estamos acostumbrados a usar **correos electrónicos (o usuarios) y contraseñas**. En principio, deberían ser personales. Aunque nuestro correo es único, únicamente uno mismo debe conocer la contraseña.
 
 Sin embargo, en la práctica, esto no es suficiente. ¿Quién impide a nuestro amigo introducir esa serie de caracteres mágicos por nosotros? Es más, ¿qué ocurriría si a ciertas páginas web se le [filtraran](https://www.businessinsider.com/stolen-data-of-533-million-facebook-users-leaked-online-2021-4) [nuestros](https://www.bbc.com/news/technology-58817658#:~:text=Game%2Dstreaming%20platform%20Twitch%20has,company%20information%20and%20streamers'%20earnings.&text=The%20documents%20appear%20to%20show,in%20the%20past%20two%20years) [datos](https://www.csoonline.com/article/3180762/inside-the-russian-hack-of-yahoo-how-they-did-it.html) [personales](https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)?
 
@@ -52,7 +53,6 @@ Una **identidad digital** es la información de una entidad para representar un 
 
 Las identidades digitales se pueden representar mediante **certificados digitales**, de la misma manera que un DNI te representa en el mundo físico. Contienen información relacionada con la persona, y pueden ser emitidos por una **autoridad de certificación**.
 
-FIXME ¿seguimos desarrollando esta parte? Nos metemos en jardines de otros.
 
 ## Espera, ¿por qué todas las páginas me ofrecen galletas?
 
