@@ -42,15 +42,15 @@ Este ha sido un ejemplo de
 
 . . .
 
-@. Identificación
+Identificación,
 
 . . .
 
-@. Autentificación.
+autentificación,
 
 . . .
 
-@. Autorización.
+y autorización.
 
 # ¿Qué es la identificación?
 
@@ -69,11 +69,11 @@ Hasta ahora, solíamos usar correo o usuario y contraseña.
 
 . . .
 
-@. ¿Podría suplantarnos alguien?
+¿Podría suplantarnos alguien?
 
 . . .
 
-@. ¿Y qué ocurre si se filtran?
+¿Y qué ocurre si se filtran?
 
 . . .
 
@@ -85,19 +85,128 @@ Hasta ahora, solíamos usar correo o usuario y contraseña.
 
 ## ... de Yahoo...
 
-![](./img/yahoo.png)
+![](./img/yahoo.png){width="65%"}
 
 . . .
 
 ## ... de Twitch...
 
-![](./img/twitch.png)
+![](./img/twitch.png){width="65%"}
 
 . . .
 
 ## ... Y, cómo no, de Facebook.
 
-![](img/facebook.png)
+![](img/facebook.png){width="65%"}
+
+# Una identidad digital para la nueva era
+
+Necesitamos una forma de identificarnos fielmente en internet.
+
+## Identidades digitales
+
+. . .
+
+Es la información de una entidad para representar un agente externo
+
+. . .
+
+ISO/IEC 24760-1 define una identidad como *conjunto de atributos relacionados con una entidad*.
+
+## Certificados digitales
+
+Las identidades digitales se representan mediante certificados digitales.
+
+. . .
+
+Contienen información relacionada con la persona, y pueden ser emitidos por una **autoridad de certificación**.
+
+# Las galletas de internet
+
+![](img/cookies.jpg){width="58%"}
+
+## Los servidores no crecen en los árboles
+
+Mantener un servicio cuesta dinero. Pero rara vez el usuario paga directamente.
+
+. . .
+
+¿Cómo se costea entonces la infraestructura?
+
+## La publicidad
+
+Las empresas pagan a las páginas para mostrar su publicidad.
+
+. . .
+
+Con el tiempo, se dieron cuenta de que podrían afinar el público objetivo.
+
+. . .
+
+Nacen así las cookies de seguimiento.
+
+## Identidades y cookies
+
+Las cookies de seguimiento son una forma de observar a un usuario. Las empresas de publicidad crean un perfil basándose en tus datos de navegación.
+
+. . .
+
+Así, consiguen rastrearte y aprender sobre tus intereses.
+
+## Oye, ¿pero esto no es muy abusivo?
+
+. . .
+
+## Sí.
+
+. . .
+
+Y así lo cree también la Unión Europea.
+
+. . .
+
+La GPDR entró en vigor en el año 2018. Fuerza a las páginas web a pedirte consentimiento para que tus datos sean analizados.
+
+. . .
+
+Es una forma de proteger al usuario.
+
+## Aunque eso signifique molestos banners.
+
+![](./img/cookies.png){width="60%"}
+
+. . .
+
+Ugh.
+
+# La comunidad al rescate
+
+## Extensiones
+
+Se han lanzado varias extensiones para protegernos de la publicidad y el seguimiento.
+
+Algunos ejemplos son
+
+. . .
+
+## uBlock Origin
+
+![](img/ublock.png)
+
+. . .
+
+## Privacy Badger
+
+![](./img/pb.jpg)
+
+# Un arma de doble filo
+
+La identificación es un bien necesario...
+
+. . .
+
+... Pero algunas personas se han intentado aprovechar de la capacidad de identificar a usuarios online.
+
 
 # Necesitamos métodos más robustos
 
