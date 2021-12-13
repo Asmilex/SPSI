@@ -41,13 +41,13 @@ Deberíamos hablar de las siguientes cosas:
   - El usuario es quien dice ser. No repudio (o no rechazo)
   - Autenticidad (spsi_slides, 140)
 
-La autentificación es el proceso por el cual se comprueba y/o verifica la procedencia o identidad de un objeto. Supone un problema desde tiempos antiguos, hasta hoy, si bien sus usos y aplicaciones pueden haber cambiado, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo? 
+La autentificación es el proceso por el cual se verifica la procedencia o identidad de un documento o usuario. Ha supuesto un problema a solucionar desde tiempos antiguos. Si bien sus usos y aplicaciones pueden haber variado a lo largo del tiempo, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo? 
 
-A lo largo de la historia se han ido usando distintos métodos, acordes a la tecnologia y necesidades de cada era, aunque algunos principios para este fin se han mantenido a lo largo del tiempo.
+A lo largo de la historia se han ido usando distintos métodos, acordes a la tecnologia y necesidades de cada era, aunque algunos principios se han mantenido. Pongamos por ejemplo la firma. La firma es un método por el cual se identifica, autentifica y garantiza el "no repudio" del documento firmado. Es un método poco fiable, ya que es relativamente fácil replicar una firma, y dificil de comprobar si se trata de una copia o de la original, sin embargo es un método que ha perdurado desde el medievo hasta nuestros días y sigue teniendo un importante papel en nuestras vidas.
 
-Pongamos por ejemplo la firma. La firma es un método por el cual se identifica, autentifica y garantiza el "no repudio" del documento firmado. Es un método poco fiable, ya que es relativamente fácil replicar una firma, y dificil de comprobar si se trata de una copia o de la original, sin embargo es un método que ha perdurado desde el medievo hasta nuestros días y sigue teniendo un importante papel en nuestras vidas.
+Por supuesto, este no es el único método para verificar la autenticidad de un documento o la identidad de una persona. La mayoría de países del mundo cuentan con algún tipo de certificado que garantiza que una persona es quien dice ser, habitualmente incluyendo una fotografía, firma, huella dactilar o cualquier otro elemento identificativo y/o dificil de replicar.
 
-Por supuesto, este no es el único método para verificar la autenticidad de un documento o la identidad de una persona. La mayoría de países del mundo cuentan con algún tipo de certificado que garantiza que una persona es quien dice ser, habitualmente incluyendo una fotografía, firma, huella dactilar o cualquier otro elemento identificativo y dificil de replicar.
+#PF: Falta un conector entre lo físico y lo digital
 
 ### Métodos de autentificación
 
@@ -92,15 +92,6 @@ Los protocolos de control de accesos son un mecanismo de seguridad que protegen 
 
 ####  Autentificación de documentos
 
-
-
-
-
-%### La firma en la era digital
-
-%Con la popularización de la informática e internet, verificar la identidad de una persona o entidad se ha hecho aún más complicado. Es extremadamente sencillo perpetrar una usurpación de identidad en internet, así, se han diseñado métodos para verificar la identidad de una persona y/o autenticidad de un documento.
-
-%Uno de los métodos de autentificación más comunes y extendidos es la firma digital, 
 
 
 ### Métodos
