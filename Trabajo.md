@@ -115,7 +115,7 @@ Los métodos de autentificación se pueden dividir en 3 categorías [Chapter 21:
 
 * "Algo que tienes"(*Something you have*): Métodos que pueden incluir tarjetas de coordenadas, tarjetas inteligentes, archivos informáticos o cualquier otro objeto pre-existente que sea necesario en el proceso de autentificación.
 
-Es habitual encontrar sistemas que combinen varios de estos métodos, esto es en lo que se basan los conocidos sistemas de autentificación en 2 pasos o de 2 factores (2FA).
+Es habitual encontrar sistemas que combinen varios de estos métodos, esto es en lo que se basan los conocidos sistemas de autentificación en 2 pasos o de 2 factores (2FA), de los que hablaremos más adelante.
 
 #### Algo que eres
 
@@ -153,9 +153,8 @@ La integridad de la información se refiere a que la información no pueda ser m
 El no-repudio de la información se refiere a que la persona responsable de la información no pueda convencer a terceras personas de que esa información no le pertenece.
 
 
-## Métodos
-- Tipos de métodos (https://www.wikiwand.com/en/Authentication), (https://www.redeszone.net/tutoriales/seguridad/diferencias-autenticacion-autorizacion/)
-## Factores
+## Factores de autentificación
+TODO
 - Tipos de factores (https://www.wikiwand.com/en/Authentication#/Authentication_factors)
 
 
@@ -165,10 +164,7 @@ A continuación, exponemos algunos métodos de autentificación e identificació
 
 ## MAC
 
-<<<<<<< HEAD
-[1](https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/)
-=======
-La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. La **integridad** consiste en asegurarse que un mensaje no ha sido modificado por terceros. Y, en caso de haberlo sido, que se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
+La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. Como hemos dicho anteriormente, la **integridad** consiste en asegurarse que un mensaje no ha sido modificado por terceros. Y, en caso de haberlo sido, que se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
 $$
 MAC(M) = F(K_{AB} , M)
 $$
