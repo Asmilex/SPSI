@@ -9,6 +9,7 @@ documentclass: report
 lang: es
 toc: true
 toc-title: Índice de contenidos
+date: 13 de Diciembre de 2021
 numbersections: true
 urlcolor: blue
 ---
@@ -78,9 +79,6 @@ Por ello, será necesario implantar una normativa que proteja a los usuarios y p
 
 
 # ¿Qué es la autentificación?
-- Qué es autentificar == autenticar
-  - El usuario es quien dice ser. No repudio (o no rechazo)
-  - Autenticidad (spsi_slides, 140)
 
 La autentificación es el proceso por el cual se verifica la procedencia o identidad de un documento o usuario. Ha supuesto un problema a solucionar desde tiempos antiguos. Si bien sus usos y aplicaciones pueden haber variado a lo largo del tiempo, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo? 
 
@@ -98,7 +96,7 @@ Por supuesto, en respuesta a estos problemas se han diseñado y articulado gran 
 
 Habitualmente, se asocian los métodos de autentificación con el uso de contraseñas. En realidad hay una gran variedad de métodos distintos para autentificar un usuario o un documento.
 
-Los métodos de autentificación se pueden dividir en 3 categorías [Chapter 21: Authentication and Auditing Services, What is Authentication?; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman]:
+Los métodos de autentificación se pueden dividir en 3 categorías:
 
 * "Algo que eres"(*Something you are*): Estos métodos suelen utilizar datos biométricos para autentificar al usuario, huellas dactilares, escáneres de retina o iris, analisis de voz, escaneres faciales, etc.
 
@@ -112,17 +110,17 @@ Es habitual encontrar sistemas que combinen varios de estos métodos, esto es en
 
 Los mecanismos de autentificación "Algo que eres" se basan en datos biométricos para verificar al usuario. La biométrica se podría definir como "el uso de la informática para extraer las características únicas de un individual, sean físicas o conductuales, para verificar positivamente y/o identificar la identidad de un individuo." [Chapter 1: An Introduction to Biometrics, A formal definition of biometrics; Biometric Technology, 2014, R. Das].
 
-Entre los datos biométricos más usados a día de hoy podemos encontrar los escáneres faciales, dactilares o el análisis de voz. Sin ir más lejos, muchos de los nuevos teléfonos móviles de media y alta gama traen incorporados un escáner de huella dactilar y/o tecnología infraroja para el escaneo de las características faciales, así como también ordenadores, muchos de los cuales incorporan software como Windows Hello para el desbloqueo por escaner facial o dactilar. [Learn about Windows Hello and set it up. 2021. Microsoft. http://web.archive.org/web/20211208034747/https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0]
+Entre los datos biométricos más usados a día de hoy podemos encontrar los escáneres faciales, dactilares o el análisis de voz. Sin ir más lejos, muchos de los nuevos teléfonos móviles de media y alta gama traen incorporados un escáner de huella dactilar y/o tecnología infraroja para el escaneo de las características faciales, así como también ordenadores, muchos de los cuales incorporan software como Windows Hello para el desbloqueo por escaner facial o dactilar.
 
 #### Algo que sabes
 
 Los mecanismos de autentificación "Algo que sabes" dependen de que ese "algo" sea dificil de adivinar y secreto. Este es el mecanismos de autentificación más extendido, por medio de contraseñas, sin embargo, para autenticarte de manera fiable, debes de conocer el secreto de manera fiable también. Esto no es tan sencillo como parece. A la mayoría de las personas no se le da bien inventarse y recordar cosas difíciles de adivinar, y se les da aún peor guardar secretos. Las contraseñas cortas son fáciles de recordar, pero aún más fáciles de adivinar, si son largas no será sencillo adivinarlas, pero serán complicadas de recordar. Muchos usuarios en respuesta a esto deciden apuntarlas, no vaya a ser que la olviden. Esto es otro tipo de mecanismo de autentificación que discutiremos más adelante, el "algo que tienes" pero ya no se trata de saber algo y mantenerlo en secreto.
 
-Este tipo de mecanismos es probablemente uno de los más antiguos y usados, uno esperaría una autenticación del tipo desafío-respuesta al llegar a un campamento militar o encontrarse con unos espías aliados en un museo de arte para pasar cierta información. [Chapter 21: Authentication and Auditing Services, Something You Know; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman] [Just M. (2011) Challenge-Response Identification. In: van Tilborg H.C.A., Jajodia S. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA. https://doi.org/10.1007/978-1-4419-5906-5_73] Los conocidos CAPTCHAs (Tests de Turing Completamente Automatizados para Diferenciar Humanos y Computadoras) son también un ejemplo de protocolo desafío-respuesta [What is CAPTCHA?. 2021. Google. https://web.archive.org/web/20211009162328/https://support.google.com/a/answer/1217728?hl=en]
+Este tipo de mecanismos es probablemente uno de los más antiguos y usados, uno esperaría una autenticación del tipo desafío-respuesta, de la que hablaremos a continuación, al llegar a un campamento militar o encontrarse con unos espías aliados en un museo de arte para pasar cierta información. Los conocidos CAPTCHAs (Tests de Turing Completamente Automatizados para Diferenciar Humanos y Computadoras) son también un ejemplo de protocolo desafío-respuesta
 
 #### Algo que tienes
 
-En la práctica, los sistemas más efectivos de autentificación en internet suelen basarse en este tercer tipo. Lo que tienes podría ser una lista de contraseñas de un solo uso, una tarjeta electrónica o cualquier otro objeto al que solo el usuario tenga acceso. Normalmente se combinan también con el "Algo que sabes" y se crea así el 2FA. [Chapter 21: Authentication and Auditing Services, Something You Have; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman]
+En la práctica, los sistemas más efectivos de autentificación en internet suelen basarse en este tercer tipo. Lo que tienes podría ser una lista de contraseñas de un solo uso, una tarjeta electrónica o cualquier otro objeto al que solo el usuario tenga acceso. Normalmente se combinan también con el "Algo que sabes" y se crea así el 2FA.
 
 ### Aplicaciones
 
@@ -133,21 +131,15 @@ A grosso modo podemos distinguir dos usos o aplicaciones de los protocolos de au
 
 #### Control de accesos
 
-Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos. [Brose G. (2005) Access Control. In: van Tilborg H.C.A. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA . https://doi.org/10.1007/0-387-23483-7_3]
+Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos.
 
 ####  Autentificación de información
 
-La autentificación de la información tiene dos objetivos, certificar el origen de ésta y garantizar que la información no ha sido modificada. La autentificación es un mecanismo crítico para mantener la integridad de la información y garantizar el no-repudio por parte del emisor. [Chapter 4: Data Authentication; Introduction to Network Security, Higher Education Press, 2014, J.Wang, Z.A.Kissel]
+La autentificación de la información tiene dos objetivos, certificar el origen de ésta y garantizar que la información no ha sido modificada. La autentificación es un mecanismo crítico para mantener la integridad de la información y garantizar el no-repudio por parte del emisor.
 
 La integridad de la información se refiere a que la información no pueda ser modificada por ningun actor no-autorizado.
 
 El no-repudio de la información se refiere a que la persona responsable de la información no pueda convencer a terceras personas de que esa información no le pertenece.
-
-
-## Factores de autentificación
-TODO
-- Tipos de factores (https://www.wikiwand.com/en/Authentication#/Authentication_factors)
-
 
 # Métodos modernos de autentificación e identificación
 
@@ -311,3 +303,11 @@ La firma biométrica es un recurso verdaderamente práctico para la protección 
 14. Wikipedia contributors. (2021, 9 diciembre). Certificate authority. Wikipedia. https://en.wikipedia.org/wiki/Certificate_authority?oldformat=true
 15. Wikipedia contributors. (2021b, diciembre 10). General Data Protection Regulation. Wikipedia. https://en.wikipedia.org/wiki/General_Data_Protection_Regulation?oldformat=true
 16. Wikipedia contributors. (2021a, noviembre 5). Digital identity. Wikipedia. https://en.wikipedia.org/wiki/Digital_identity?oldformat=true
+17. Chapter 21: Authentication and Auditing Services, What is Authentication?; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman
+18. Chapter 21: Authentication and Auditing Services, Something You Know; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman
+19. Chapter 21: Authentication and Auditing Services, Something You Have; Building Internet Firewalls, O'Reilly, 2000, E.D.Zwicky, S.Cooper, D.B.Chapman
+20. Microsoft. (2021). Learn about Windows Hello and set it up. http://web.archive.org/web/20211208034747/https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0
+21. Just M. (2011) Challenge-Response Identification. In: van Tilborg H.C.A., Jajodia S. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA. https://doi.org/10.1007/978-1-4419-5906-5_73
+22. What is CAPTCHA?. 2021. Google. https://web.archive.org/web/20211009162328/ https://support.google.com/a/answer/1217728?hl=en
+23. Brose G. (2005) Access Control. In: van Tilborg H.C.A. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA . https://doi.org/10.1007/0-387-23483-7_3
+24. Chapter 4: Data Authentication; Introduction to Network Security, Higher Education Press, 2014, J.Wang, Z.A.Kissel
