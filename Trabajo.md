@@ -69,7 +69,7 @@ Para contrarrestar este tipo de comportamientos posiblemente abusivos, se han la
 
 Algunos servicios han empezado a implementar sistemas de protección de datos para mitigar el impacto de este problema. Por ejemplo, la anonimización de datos es uno de ellos. Esto ha llevado a que muchos usuarios pongan por delante la privacidad antes que la experiencia de usuario.
 
-También se han lanzado algunas herramientas que actúan desde la parte del usuario. Algunas de ellas son [µblock origin](https://ublockorigin.com/), que bloquea cualquier tipo de publicidad, o [privacy badger](https://privacybadger.org/), la cual bloquea los rastreadores invisibles. Hoy en día, considero que es mandatorio utilizar extensiones similares. Así lo consideran incluso los [propios navegadores](https://www.mozilla.org/en-US/firefox/features/adblocker/).
+También se han lanzado algunas herramientas que actúan desde la parte del usuario. Algunas de ellas son [ublock origin](https://ublockorigin.com/), que bloquea cualquier tipo de publicidad, o [privacy badger](https://privacybadger.org/), la cual bloquea los rastreadores invisibles. Hoy en día, considero que es mandatorio utilizar extensiones similares. Así lo consideran incluso los [propios navegadores](https://www.mozilla.org/en-US/firefox/features/adblocker/).
 
 ## Un arma de doble filo
 
@@ -80,7 +80,7 @@ Por ello, será necesario implantar una normativa que proteja a los usuarios y p
 
 # ¿Qué es la autentificación?
 
-La autentificación es el proceso por el cual se verifica la procedencia o identidad de un documento o usuario. Ha supuesto un problema a solucionar desde tiempos antiguos. Si bien sus usos y aplicaciones pueden haber variado a lo largo del tiempo, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo? 
+La autentificación es el proceso por el cual se verifica la procedencia o identidad de un documento o usuario. Ha supuesto un problema a solucionar desde tiempos antiguos. Si bien sus usos y aplicaciones pueden haber variado a lo largo del tiempo, el problema es el mismo. ¿Cómo comprobar la identidad o procedencia de algo?
 
 A lo largo de la historia se han ido usando distintos métodos, acordes a la tecnologia y necesidades de cada era, aunque algunos principios se han mantenido. Pongamos por ejemplo la firma. La firma es un método por el cual se identifica, autentifica y garantiza el "no repudio" del documento firmado. Es un método poco fiable, ya que es relativamente fácil replicar una firma, y dificil de comprobar si se trata de una copia o de la original, sin embargo es un método que ha perdurado desde el medievo hasta nuestros días y sigue teniendo un importante papel en nuestras vidas.
 
