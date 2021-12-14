@@ -85,19 +85,19 @@ Hasta ahora, solíamos usar correo o usuario y contraseña.
 
 ## ... de Yahoo...
 
-![](./img/yahoo.png){width="65%"}
+![](./img/yahoo.png){width="75%"}
 
 . . .
 
 ## ... de Twitch...
 
-![](./img/twitch.png){width="65%"}
+![](./img/twitch.png){width="75%"}
 
 . . .
 
 ## ... Y, cómo no, de Facebook.
 
-![](img/facebook.png){width="65%"}
+![](img/facebook.png){width="75%"}
 
 # Una identidad digital para la nueva era
 
@@ -107,7 +107,7 @@ Necesitamos una forma de identificarnos fielmente en internet.
 
 . . .
 
-Es la información de una entidad para representar un agente externo
+Es toda la información disponible online de un agente externo (como una persona, organización o dispositivo electrónico).
 
 . . .
 
@@ -115,11 +115,11 @@ ISO/IEC 24760-1 define una identidad como *conjunto de atributos relacionados co
 
 ## Certificados digitales
 
-Las identidades digitales se representan mediante certificados digitales.
+Las identidades digitales se representan mediante certificados digitales, como si fueran pasaportes.
 
 . . .
 
-Contienen información relacionada con la persona, y pueden ser emitidos por una **autoridad de certificación**.
+Contienen información relacionada con la persona, y son emitidos por una **autoridad de certificación**.
 
 # Las galletas de internet
 
