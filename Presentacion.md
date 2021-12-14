@@ -218,6 +218,8 @@ Más tarde exploraremos cómo se debe hacer.
 
 # Métodos modernos
 
+. . . 
+
 @. Integridad
 
 . . .
@@ -231,25 +233,23 @@ Más tarde exploraremos cómo se debe hacer.
 . . .
 
 
-@. No repudio
-
-. . .
-
 ## MAC
 
 ![](img/MAC.png)
 
 ## Cifrado de llaves
 
-![](img/clavePublica.png)
+![](img/clavePublica.png){width="70%"}
 
 ## Firma digital
 
-![](img/FirmaDigitalEmisor.png){width="40%"}
+![](img/FirmaDigitalEmisor.png){width="45%"}
 
-![](img/FirmaDigitalReceptor.png){width="40%"}
+![](img/FirmaDigitalReceptor.png){width="45%"}
 
 # Otros métodos
+
+. . .
 
 Control de accesos
 
