@@ -86,13 +86,13 @@ A lo largo de la historia se han ido usando distintos métodos, acordes a la tec
 
 Por supuesto, este no es el único método para verificar la autenticidad de un documento o la identidad de una persona. La mayoría de países del mundo cuentan con algún tipo de certificado que garantiza que una persona es quien dice ser, habitualmente incluyendo una fotografía, firma, huella dactilar o cualquier otro elemento identificativo y/o dificil de replicar.
 
-### El mundo digital
+## El mundo digital
 
 Con el advenimiento de la era digital, la autentificación toma una renovada importancia. Es dificil verificar la identidad de un individuo tras la pantalla y problemas como suplantaciones de identidad o accesos no-autorizados a recursos de naturaleza privada suponen de mayor gravedad en un mundo cada vez más conectado y dependiente de internet y las nuevas tecnologías.
 
 Por supuesto, en respuesta a estos problemas se han diseñado y articulado gran variedad de métodos de autentificación para prevenir, o en el peor de los casos limitar la gravedad y alcance de estos problemas.
 
-### Métodos de autentificación
+## Métodos de autentificación
 
 Habitualmente, se asocian los métodos de autentificación con el uso de contraseñas. En realidad hay una gran variedad de métodos distintos para autentificar un usuario o un documento.
 
@@ -106,32 +106,32 @@ Los métodos de autentificación se pueden dividir en 3 categorías:
 
 Es habitual encontrar sistemas que combinen varios de estos métodos, esto es en lo que se basan los conocidos sistemas de autentificación en 2 pasos o de 2 factores (2FA), de los que hablaremos más adelante.
 
-#### Algo que eres
+### Algo que eres {#biometria}
 
 Los mecanismos de autentificación "Algo que eres" se basan en datos biométricos para verificar al usuario. La biométrica se podría definir como "el uso de la informática para extraer las características únicas de un individual, sean físicas o conductuales, para verificar positivamente y/o identificar la identidad de un individuo." [Chapter 1: An Introduction to Biometrics, A formal definition of biometrics; Biometric Technology, 2014, R. Das].
 
-#### Algo que sabes
+### Algo que sabes
 
 Los mecanismos de autentificación "Algo que sabes" dependen de que ese "algo" sea dificil de adivinar y secreto. Este es el mecanismos de autentificación más extendido, por medio de contraseñas, sin embargo, para autenticarte de manera fiable, debes de conocer el secreto de manera fiable también. Esto no es tan sencillo como parece. A la mayoría de las personas no se le da bien inventarse y recordar cosas difíciles de adivinar, y se les da aún peor guardar secretos. Las contraseñas cortas son fáciles de recordar, pero aún más fáciles de adivinar, si son largas no será sencillo adivinarlas, pero serán complicadas de recordar. Muchos usuarios en respuesta a esto deciden apuntarlas, no vaya a ser que la olviden. Esto es otro tipo de mecanismo de autentificación que discutiremos más adelante, el "algo que tienes" pero ya no se trata de saber algo y mantenerlo en secreto.
 
-Este tipo de mecanismos es probablemente uno de los más antiguos y usados, uno esperaría una autenticación del tipo desafío-respuesta, de la que hablaremos a continuación, al llegar a un campamento militar o encontrarse con unos espías aliados en un museo de arte para pasar cierta información. Los conocidos CAPTCHAs (Tests de Turing Completamente Automatizados para Diferenciar Humanos y Computadoras) son también un ejemplo de protocolo desafío-respuesta
+Este tipo de mecanismos es probablemente uno de los más antiguos y usados, uno esperaría una autenticación del tipo [reto-respuesta](#firma-digital), de la que hablaremos a continuación, al llegar a un campamento militar o encontrarse con unos espías aliados en un museo de arte para pasar cierta información. Los conocidos CAPTCHAs (Tests de Turing Completamente Automatizados para Diferenciar Humanos y Computadoras) son también un ejemplo de protocolo reto-respuesta.
 
-#### Algo que tienes
+### Algo que tienes
 
 En la práctica, los sistemas más efectivos de autentificación en internet suelen basarse en este tercer tipo. Lo que tienes podría ser una lista de contraseñas de un solo uso, una tarjeta electrónica o cualquier otro objeto al que solo el usuario tenga acceso. Normalmente se combinan también con el "Algo que sabes" y se crea así el 2FA.
 
-### Aplicaciones
+## Aplicaciones
 
 A grosso modo podemos distinguir dos usos o aplicaciones de los protocolos de autentificación:
 
 * Control de accesos (o autentificación de usuarios)
 * Autentificación de información
 
-#### Control de accesos
+### Control de accesos
 
-Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos.
+Los protocolos de control de accesos son un mecanismo de seguridad que protegen recursos contra accesos no autorizados. La distinción entre accesos autorizados y no autorizados se hace de acuerdo a una *política de control de accesos*. Habitualmente el control de accesos se emplea para garantizar requerimientos de seguridad tales como la **confidencialidad** y la **integridad** de los recursos, prevenir el uso no-autorizado de recursos o para prevenir la denegación de servicios o usuarios legítimos. Véase [apartado 4.3.1](#algunos-métodos-de-control-de-accesos). 
 
-####  Autentificación de información
+###  Autentificación de información
 
 La autentificación de la información tiene dos objetivos, certificar el origen de ésta y garantizar que la información no ha sido modificada. La autentificación es un mecanismo crítico para mantener la integridad de la información y garantizar el no-repudio por parte del emisor.
 
@@ -141,13 +141,18 @@ El no-repudio de la información se refiere a que la persona responsable de la i
 
 # Métodos modernos de autentificación e identificación
 
-A continuación, exponemos algunos métodos de autentificación e identificación muy usados a de hoy.
+Conocidas ya la identificación, la autenticación y sus diferencias, expondremos algunos métodos utilizados hoy para garantizar tanto identificación como autenticación. En el contexto del paso de mensajes hay algunas características deseables:
+
+* Identificación y autenticación de emisor y receptor.
+* Confidencialidad.
+* Integridad del mensaje.
+* No repudio
+
+Explicaremos estas propiedas y algunos algoritmos y métodos utilizados para cumplir con cada una de ellas. A raíz de estos, expondremos también algunas técnicas vigentes a día de hoy que aseguran identificación y autenticación.
 
 ## MAC
 
-[1](https://www.tecnomental.com/seguridad-informatica/identificacion-y-autenticacion-que-es/)
-=======
-La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. La **integridad** consiste en asegurarse que un mensaje no ha sido modificado por terceros. Y, en caso de haberlo sido, que se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
+La autenticación de un mensaje tiene como objetivo autentificar el origen del mismo y garantizar, al mismo tiempo, la integridad. Como hemos dicho anteriormente, la **integridad** consiste en asegurarse que un mensaje no ha sido modificado por terceros, y en caso de haberlo sido, que se detecte. La técnica más común son los servicios conocidos como **MAC** (“Message Authentication Code”), que se pueden expresar como función del mensaje $M$ que se quiere enviar y la clave compartida entre emisor A y receptor B, $K_{AB}$, de forma que
 $$
 MAC(M) = F(K_{AB} , M)
 $$
@@ -160,6 +165,7 @@ El proceso es el siguiente:
    - Si coincide con el recibido junto a M, se determina la integridad del mensaje.
   
 La función $F$ puede referirse a técnicas de cifrado como el AES o el RSA, pero es más usual el empleo de funciones compendio, resumen o hash, caracterizadas por:
+
 - Ser sencillas de calcular.
 - Proporcionan un mensaje de salida de longitud fija.
 - Dos mensajes distintos proporcionan salidas distintas.
@@ -185,20 +191,22 @@ Al margen de la autenticación MAC, un sistema simple basado en técnicas de cif
 
 La privacidad del mensaje queda garantizada, según vimos, haciendo que A cifre la información con la clave pública de B, ya que solo este, a través de su clave privada, podrá acceder al mensaje original.
 
-Como se muestra en la Imagen 10, para proporcionar autenticación además de privacidad, bastará con que A, previamente al cifrado con la clave pública de B que garantiza la confidencialidad, cifre el mensaje haciendo uso de su propia clave privada. Así, B, tras recibir el mensaje cifrado y descifrarlo con su clave privada, comprobará que el emisor es A al descifrar en una segunda etapa con la clave pública de este.
+Como se muestra en la Figura 4.3, para proporcionar autenticación además de privacidad, bastará con que A, previamente al cifrado con la clave pública de B que garantiza la confidencialidad, cifre el mensaje haciendo uso de su propia clave privada. Así, B, tras recibir el mensaje cifrado y descifrarlo con su clave privada, comprobará que el emisor es A al descifrar en una segunda etapa con la clave pública de este.
 
-De esta forma el emisor «firma» el mensaje enviado de tal forma que, no pudiendo haber sido generado por nadie más, el emisor no pueda repudiar el mensaje transferido. Por analogía con las firmas manuscritas, este tipo de mecanismos de no repudio se conocen como **firma digital**.
+![Autenticación y confidencialidad mediante cifrado de clave pública](img/clavePublica.png){width="70%"}
+
+De esta forma el emisor «firma» el mensaje enviado de tal forma que, no pudiendo haber sido generado por nadie más, el emisor **no pueda repudiar** el mensaje transferido. Por analogía con las firmas manuscritas, este tipo de mecanismos de no repudio se conocen como **firma digital**.
 
 Al igual que sucede con la autenticación, el no repudio puede proporcionarse mediante el empleo de técnicas de cifrado; tanto de clave secreta como de clave pública.
 
- En el caso de las primeras, se suele recurrir a una entidad central, referida como **Big Brother** (BB), de acuerdo al siguiente procedimiento:
+ En el caso de las primeras, se suele recurrir a una entidad central, referida como **Big Brother** (BB), de acuerdo al siguiente procedimiento (ver figura 4.4):
 
 1. Supuesto que A desea contactar con B, el primero envía su identidad a BB. Además, cifrado con la clave que con él comparte, $K_A$, le comunica la identidad de B y el mensaje a transmitir a este, $P$. Adicionalmente puede incluirse una marca de tiempo ($t$).
 2. Recibida esta solicitud de envío, BB transmitirá a B, cifrado todo con la clave secreta compartida entre ambos, $K_B$, la identidad de A, el mensaje $P$, un sello de tiempo $t$ y la firma digital de BB. La firma digital de BB consiste en los tres primeros elementos antes mencionados cifrados con una clave privada particular de BB, $K_{BB}$, de modo que solo él puede descifrar la información.
 
 La firma digital es la prueba que puede presentar B en una hipotética demanda judicial por parte de A. Así, demostrado el mensaje transferido, la fecha y la identidad del emisor, el caso quedará legalmente zanjado.
 
-En el caso de las técnicas de cifrado de clave pública, la generación de firmas digitales sigue el mismo proceso que el descrito para proporcionar autenticación (imagen 10). El descifrado del mensaje recibido con la clave pública del emisor basta para demostrar que aquel solamente pudo ser generado por este. El conjunto de procesos seguidos en una comunicación entre un emisor A y un receptor B en la que se intercambian un mensaje $P$ mediante un esquema de firma digital es el siguiente:
+En el caso de las técnicas de cifrado de clave pública, la generación de firmas digitales sigue el mismo proceso que el descrito para proporcionar autenticación (Figura 4.3). El descifrado del mensaje recibido con la clave pública del emisor basta para demostrar que aquel solamente pudo ser generado por este. El conjunto de procesos seguidos en una comunicación entre un emisor A y un receptor B en la que se intercambian un mensaje $P$ mediante un esquema de firma digital es el siguiente:
 
 1. Obtención del resumen del mensaje : $R = hash(P)$.
 2. Cifrado (función de cifrado $F$) del resumen con la clave privada de A, $K_{A}^{priv}$ esto constituye la firma digital en sí: $FD = F_{K_{A}^{priv}}(R)$.
@@ -210,7 +218,9 @@ Recibido $C$ en el receptor, este procederá como sigue:
 2. Obtención del resumen de $P$ tras descifrar $FD$ con la clave pública de A, $R = F^{-1}_{K_A^{pub}}(FD)$.
 3. Como $P$ es conocido desde el primer paso, se le calcula a este el compendio y debe coincidir con el obtenido en el paso 2, en ese caso la comunicación se da por válida.
 
-Mediante este uso de esquemas de firma digital basados en funciones hash se cubre no solo el no repudio, sino también:
+![Descifrado con firma digital usando compendio](img/FirmaDigitalReceptor.png)
+
+Mediante este uso de esquemas de firma digital basados en funciones hash se cubre no solo el **no repudio**, sino también:
 
 - **Confidencialidad**: Mediante el uso de RSA con la clave pública del receptor.
 - **Integridad**, ya que el resumen es único para cada mensaje.
@@ -218,9 +228,16 @@ Mediante este uso de esquemas de firma digital basados en funciones hash se cubr
 
 ## Otras técnicas de identificación y autentificación
 
-### Control de accesos
+Ya hemos visto que las firmas digitales nos permiten garantizar todas las propiedades más deseables, por lo que podemos aprovechar estas técnicas para desarrollar otros métodos de identificación y control que están muy a la orden del día. Aunque la lista es muy larga, nosotros expondremos algunos de los más importantes, como son:
 
-Los primeros elementos para prevenir accesos no autorizados a la red son establecer medidas para controlar dicho acceso y determinar la autenticidad de las entidades. Estudiaremos ahora algunas técnicas hardware y software para garantizar dicho acceso.
+* Algunos métodos de control de accesos.
+* Verificación en dos pasos (2FA).
+* OAuth.
+* Biometría.
+
+### Algunos métodos de control de accesos
+
+Los métodos de control de acceso se encargan de garantizar que ningun individuo o sistema no deseado puede acceder a la información o a algún recurso. Un ejemplo clarificador es una cerradura, pues sólo puede abrirla y acceder al interior de un domicilio quien posee esa llave. En el contexto de la red, los primeros elementos para prevenir accesos no autorizados son establecer medidas para controlar dicho acceso y determinar la autenticidad de las entidades. Estudiaremos ahora algunas técnicas hardware y software para garantizar dicho acceso.
 
 Sobre las técnicas hardware, una de las alternativas es el uso de terminales de acceso, que son dispositivos que se encargan de la autenticación y la verificación de la persona que los usa. Pueden incluir verificación por huellas dactilares y sensores anti-rotura en tiempo real, y funcionar en línea o en solitario. Otra alternativa es la monitorización visual, incluyendo el uso de imágenes y audio en tiempo real junto con tecnologías de localización tipo GPS.
 
@@ -234,7 +251,7 @@ Por otro lado, mediante software, existen aplicaciones que monitorizan las activ
 
 #### Verificación en dos pasos
 
-La verificación en dos pasos, en inglés '*two-factor authentication*' y popularmente conocida como *2FA* es una técnica de identificación cuya idea básica es añadir un paso más a las técnicas de verificación usuales. Para clarificar, nos centraremos en el caso de iniciar sesión en distintas plataformas, de hecho la verificación en dos pasos es usada en servicios como Google, Facebook, Twitter o Instagram.
+La verificación en dos pasos, en inglés '*two-factor authentication*' y popularmente conocida como *2FA* es una técnica de autenticación cuya idea básica es añadir un paso más a las técnicas de verificación usuales. Para clarificar, nos centraremos en el caso de iniciar sesión en distintas plataformas, de hecho la verificación en dos pasos es usada en servicios como Google, Facebook, Twitter, Instagram o GitHub.
 
 Tradicionalmente siempre ha bastado con proporcionar usuario y contraseña para iniciar sesión. Pero, desde hace pocos años, hay una tendencia a incluir un paso más. Estos pasos suelen ser introducir un código enviado por SMS, confirmar el inicio de sesión desde un e-mail o una notificación en el teléfono móvil.
 
@@ -248,11 +265,11 @@ Hay muchos métodos de verificación en dos pasos, algunos de los más populares
 
 #### OAuth
 
-Cada vez más páginas webs, foros, blogs, tiendas etc. nos piden que nos registremos rellenando una y otra vez para cada sitio web todos nuestros datos. Gracias a Open Authorization (OAuth) nos podemos olvidar de tener que registrarnos una y otra vez en cada uno de los servicios que utilicemos, ya que, con un solo registro, podríamos iniciar sesión muy fácilmente en diferentes webs, sin necesidad de compartida toda nuestra identidad digital.
+Cada vez más páginas web, foros, blogs, tiendas etc. nos piden que nos registremos rellenando una y otra vez para cada sitio web todos nuestros datos. Gracias a *Open Authorization* (OAuth) nos podemos olvidar de tener que registrarnos una y otra vez en cada uno de los servicios que utilicemos, ya que, con un solo registro, podríamos iniciar sesión muy fácilmente en diferentes webs, sin necesidad de compartida toda nuestra identidad digital.
 
 A día de hoy muchas plataformas, como Instagram o Spotify, permiten iniciar sesión utilizando nuestra cuenta de Facebook o de Google, ahorrándonos el tiempo de rellenar el formulario, facilitando así el proceso de registro. OAuth es un estándar abierto que permite la autorización segura mediante el uso de un API. En la actualidad se usa desde octubre de 2012, en su versión OAuth 2.0.
 
-Definimos algunos roles importantes para poder entender su funcionamiento:
+Definimos algunos roles importantes para poder entender su funcionamiento (Figura 4.10):
 
 - **Cliente**: Es la aplicación que quiere acceder a la cuenta de usuario de un determinado servicio, como Facebook, Twitter, Google, etc.
 - **Usuario**: Es quien autoriza a la aplicación a acceder a su cuenta, mediante una ventana emergente que pide autorización, y normalmente se incluye información sobre los datos que se van a compartir al servicio nuevo. 
@@ -273,7 +290,7 @@ Aunque este servicio se ha extendido por muchos medios, [varias voces contrarias
 
 ### Biometría
 
-La biometría es la identificación automática de los individuos en función de sus características biológicas. La biometría se basa en el reconocimiento de una característica física e intransferible de las personas, como retina, huellas dactilares, palma de la mano, etc. A grandes rasgos, se compara la imagen obtenida mediante un escáner o similar con una base de datos almacenada en el sistema.
+Tal y como introdujimos [anteriormente](#biometria), la biometría es la identificación automática de los individuos en función de sus características biológicas. La biometría se basa en el reconocimiento de una característica física e intransferible de las personas, como retina, huellas dactilares, palma de la mano, etc. A grandes rasgos, se compara la imagen obtenida mediante un escáner o similar con una base de datos almacenada en el sistema.
 
 ![Biometría](img/biometria.png){width="50%"}
 
