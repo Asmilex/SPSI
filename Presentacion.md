@@ -216,6 +216,32 @@ Más tarde exploraremos cómo se debe hacer.
 
 *Spoiler: la autentificación ayudará mucho.*
 
+# ¿Qué es la autentificación?
+
+# La cosa se complica
+
+![](./img/hacker.png)
+
+# ¿Cómo lo hacemos?
+
+Factores de autentificación:
+
+* Algo que eres
+* Algo que sabes
+* Algo que tienes
+
+## Algo que eres
+
+![](./img/huella-dactilar.png)
+
+## Algo que sabes
+
+![](./img/candado.png)
+
+## Algo que tienes
+
+![](./img/lector-tarjetas.png)
+
 # Métodos modernos
 
 . . . 
